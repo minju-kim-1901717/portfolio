@@ -1,5 +1,6 @@
 /** 영상 링크: 유튜브 5개는 내부 팝업, 인스타그램 2개는 HTML에서 외부 링크 연결. */
 const portfolioVideos = {
+  nethra: { title: 'NÉTHRA — AI Beauty Brand Campaign', url: 'https://youtube.com/shorts/nsKG7nkPA0Y' },
   'ai-ad':  { title: 'AI 가상 브랜드 광고', url: 'https://youtu.be/kRm6HHq3u9g' },
   webtoon:  { title: '사주브랜드 · AI 웹툰', url: 'https://youtube.com/shorts/VNQrutF2Oa8' },
   lens:     { title: '렌즈 브랜드 홍보', url: 'https://youtube.com/shorts/xtz5k6fFPQ8' },
@@ -181,7 +182,7 @@ if (downloadLink) {
       const blobUrl = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = blobUrl;
-      a.download = downloadLink.download || 'Kim Minju Portfolio.pdf';
+      a.download = downloadLink.download || 'MINJU KIM Portfolio.pdf';
       document.body.append(a);
       a.click();
       a.remove();
