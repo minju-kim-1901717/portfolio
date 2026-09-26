@@ -23,9 +23,9 @@ for(const trigger of document.querySelectorAll('[data-case-video]')){
       iframe.allowFullscreen=true;
       caseStage.append(iframe);
     } else {
-      const note=document.createElement('p');note.className='local-message';
-      note.textContent='GitHub Pages에 배포한 웹사이트에서 영상을 재생하거나 아래 YouTube 링크를 이용해 주세요.';
-      caseStage.append(note);
+      // 로컬 미리보기에서 오류 안내 대신 원본 영상으로 이동합니다.
+      window.open(`https://youtube.com/shorts/${id}`, '_blank', 'noopener,noreferrer');
+      return;
     }
     caseDialog.showModal();
   });

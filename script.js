@@ -1,6 +1,5 @@
 /** 영상 링크: 유튜브 5개는 내부 팝업, 인스타그램 2개는 HTML에서 외부 링크 연결. */
 const portfolioVideos = {
-  nethra: { title: 'NÉTHRA — AI Beauty Brand Campaign', url: 'https://youtube.com/shorts/nsKG7nkPA0Y' },
   'ai-ad':  { title: 'AI 가상 브랜드 광고', url: 'https://youtu.be/kRm6HHq3u9g' },
   webtoon:  { title: '사주브랜드 · AI 웹툰', url: 'https://youtube.com/shorts/VNQrutF2Oa8' },
   lens:     { title: '렌즈 브랜드 홍보', url: 'https://youtube.com/shorts/xtz5k6fFPQ8' },
@@ -47,8 +46,7 @@ document.addEventListener('click', event => {
     if (videoId) {
       const isHttp = location.protocol === 'http:' || location.protocol === 'https:';
       if (isHttp) {
-        // Error 153: YouTube requires the embedding website's HTTP Referer.
-        // Keep the page and iframe referrer policy permissive enough to send the origin.
+        // YouTube 임베드 요청에 사이트 origin을 전달합니다.
         const iframe = document.createElement('iframe');
         iframe.referrerPolicy = 'strict-origin-when-cross-origin';
         iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&rel=0&playsinline=1&origin=${encodeURIComponent(location.origin)}`;
@@ -56,31 +54,17 @@ document.addEventListener('click', event => {
         iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
         iframe.allowFullscreen = true;
         stage.append(iframe);
-        caption.textContent = '재생이 제한될 경우 아래 YouTube에서 열기를 이용해 주세요.';
+        caption.textContent = '';
       } else {
-        // An iframe loaded from file:// cannot supply a useful HTTP Referer.
-        // Show a usable fallback instead of an iframe that is likely to display error 153.
-        const message = document.createElement('p');
-        message.className = 'empty-video';
-        message.textContent = '웹사이트 주소에서 재생할 수 있어요.';
-        const sub = document.createElement('span');
-        sub.textContent = 'HTML 파일을 직접 열면 YouTube가 오류 153으로 재생을 막을 수 있어요. GitHub Pages 배포 후 확인하거나 아래 링크로 감상해 주세요.';
-        message.append(sub);
-        stage.append(message);
-        caption.textContent = '현재는 로컬 HTML 미리보기 상태입니다.';
+        // file:// 미리보기: 화면에 안내 문구를 출력하지 않고 영상 원본으로 이동합니다.
+        window.open(project.url, '_blank', 'noopener,noreferrer');
+        return;
       }
       external.href = project.url;
       external.hidden = false;
     } else {
-      const message = document.createElement('p');
-      message.className = 'empty-video';
-      message.textContent = '영상이 곧 연결됩니다.';
-      const sub = document.createElement('span');
-      sub.textContent = 'script.js 파일에 YouTube 링크를 넣어 주세요.';
-      message.append(sub);
-      stage.append(message);
-      caption.textContent = '현재는 포트폴리오 디자인 미리보기 상태입니다.';
-      external.hidden = true;
+      // 설정되지 않은 항목은 UI에 제작자용 안내를 표시하지 않습니다.
+      return;
     }
     dialog.showModal();
 });
@@ -143,7 +127,7 @@ if (galleryViewport && galleryTrack) {
   galleryViewport.addEventListener('focusout', () => { interacting = false; resumeAt = performance.now() + 1500; });
   galleryViewport.addEventListener('touchstart', () => { resumeAt = performance.now() + 4000; }, {passive:true});
   galleryViewport.addEventListener('wheel', () => { resumeAt = performance.now() + 2500; }, {passive:true});
-  galleryViewport.addEventListener('pointerdown', e => { if (e.target.closest('button')) return; dragging = true; dragX = e.clientX; dragLeft = galleryViewport.scrollLeft; });
+  galleryViewport.addEventListener('pointerdown', e => { if (e.target.closest('button, a')) return; dragging = true; dragX = e.clientX; dragLeft = galleryViewport.scrollLeft; });
   window.addEventListener('pointerup', () => { if (dragging) { dragging = false; resumeAt = performance.now() + 2500; normalize(); } });
   galleryViewport.addEventListener('pointermove', e => { if (dragging && e.pointerType === 'mouse') galleryViewport.scrollLeft = dragLeft - (e.clientX - dragX); });
   galleryToggle.addEventListener('click', () => { userPaused = !userPaused; updateToggle(); });
