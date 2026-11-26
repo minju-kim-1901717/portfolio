@@ -5,10 +5,37 @@
 @media(max-width:700px){.page-wrap{width:calc(100% - 38px)}.case-nav{height:70px}.case-nav-right>a:not(.case-nav-pill){display:none}.case-nav-pill{padding:10px 12px}.case-hero{min-height:760px;min-height:100svh}.case-hero-visual{width:100%;opacity:.59}.case-hero-visual img{object-position:52% 20%}.case-hero:before{background:linear-gradient(90deg,#211821eb 0%,#211821bf 40%,#2118215c),linear-gradient(0deg,#211821 0%,transparent 32%)}.case-hero-layout{min-height:100svh;align-items:end;padding:125px 0 80px}.case-hero-copy{width:100%}.case-intro-label{margin:40px 0 16px}.case-hero h1{font-size:clamp(69px,18vw,106px);margin-bottom:30px}.case-hero-tagline{font-size:clamp(39px,10vw,61px)}.case-hero-description{font-size:12px}.case-hero-index{right:19px;bottom:15px;font-size:7px}.case-overview,.case-brand-world,.case-model,.case-product,.case-campaign,.case-film,.case-process{padding:70px 0 82px}.section-label{font-size:8px}.overview-grid,.model-grid,.film-layout{grid-template-columns:1fr;gap:38px;margin:42px 0}.overview-grid h2,.concept-heading h2,.model-copy h2,.product-heading h2,.campaign-heading h2,.film-copy h2,.process-top h2{font-size:clamp(52px,13vw,79px)}.project-facts{grid-template-columns:1fr 1fr}.project-facts div{padding:20px 12px;border-bottom:1px solid #e0d2da}.project-facts div:nth-child(2){border-right:0}.project-facts div:nth-child(n+3){border-bottom:0}.concept-heading,.product-heading,.campaign-heading,.process-top{display:block;margin:40px 0 33px}.concept-heading>p,.product-heading>p,.campaign-heading>p,.process-top>p{margin-top:24px}.concept-pair{gap:8px}.figure figcaption{font-size:8px;line-height:1.5}.brand-palette{gap:8px}.brand-palette p{width:100%}.model-copy h2{margin:18px 0 33px;font-size:clamp(79px,21vw,140px)}.model-main img{max-height:670px}.model-sheets{gap:9px}.model-sheets img{aspect-ratio:1/1}.product-gallery{grid-template-columns:1fr 1fr;gap:11px}.product-primary{grid-column:1/-1}.product-primary img{max-height:650px}.campaign-grid{grid-template-columns:1fr 1fr;gap:9px}.campaign-grid .figure:nth-child(2),.campaign-grid .figure:nth-child(4){margin-top:22px}.film-cover{max-width:425px;margin:auto;width:100%}.film-copy h2{margin:35px 0}.process-top{margin:42px 0}.process-rows>div{grid-template-columns:36px 1fr;gap:9px;padding:20px 0}.process-rows p{grid-column:2;line-height:1.6}.case-next{padding:78px 0 26px}.case-next h2{font-size:clamp(64px,13vw,88px)}.case-footer{margin-top:90px;font-size:8px}.lab-hero-inner{grid-template-columns:1fr;padding-top:165px;gap:40px}.lab-hero h1{font-size:clamp(70px,13vw,100px)}.lab-hero-inner>img{width:min(88%,430px);height:380px;justify-self:end;object-position:center 23%}.lab-projects{padding:77px 0}.lab-project-heading{display:block;margin:37px 0 45px}.lab-project-heading h2{font-size:clamp(68px,13vw,88px)}.lab-project-heading>p{margin-top:22px}.lab-project-card{grid-template-columns:1fr;gap:24px}.lab-card-copy h3{font-size:clamp(60px,15vw,100px);margin-top:23px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.lab-card-image img{transition:none}}
 
-/* TANGRY real campaign imagery */
-.tangry-hero-media{max-width:1320px;margin:48px auto 0;padding:0 28px}.tangry-hero-media img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:28px;box-shadow:0 24px 70px rgba(78,43,0,.14)}
-.tangry-image-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:40px}.tangry-image-grid figure,.tangry-visual-gallery figure,.tangry-storyboard article{margin:0}.tangry-image-grid img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:20px}.tangry-image-grid figcaption,.tangry-visual-gallery figcaption{font-size:11px;letter-spacing:.14em;margin-top:10px;color:rgba(36,27,20,.62)}
-.tangry-visual-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:42px}.tangry-visual-gallery figure.wide{grid-column:span 2}.tangry-visual-gallery img{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:22px}.tangry-visual-gallery figure:not(.wide) img{aspect-ratio:4/3}
-.tangry-storyboard{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:42px}.tangry-storyboard article{background:#fff;border:1px solid rgba(66,48,29,.09);border-radius:18px;overflow:hidden}.tangry-storyboard img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}.tangry-storyboard article>span,.tangry-storyboard h3,.tangry-storyboard p{display:block;margin-left:16px;margin-right:16px}.tangry-storyboard article>span{font-size:10px;letter-spacing:.12em;color:#e97816;margin-top:16px}.tangry-storyboard h3{font-size:20px;margin-top:8px;margin-bottom:8px}.tangry-storyboard p{font-size:13px;line-height:1.55;color:rgba(36,27,20,.68);margin-bottom:18px}
-@media (max-width:900px){.tangry-image-grid{grid-template-columns:1fr}.tangry-visual-gallery{grid-template-columns:1fr}.tangry-visual-gallery figure.wide{grid-column:auto}.tangry-storyboard{grid-template-columns:1fr 1fr}.tangry-hero-media{padding:0 18px}.tangry-hero-media img{border-radius:20px}}
-@media (max-width:560px){.tangry-storyboard{grid-template-columns:1fr}}
+/* TANGRY case study — aligned to NÉTHRA layout */
+.tangry-case{--tangry-orange:#f37718;--tangry-green:#2f7c3f;--tangry-sky:#61b9ee;background:var(--cream)}
+.tangry-case .case-brand span{color:#ff9b43}
+.tangry-case .case-hero:before{background:linear-gradient(90deg,#1c1714f0 0%,#1c1714bf 43%,#1c17143d 72%,transparent 100%),linear-gradient(0deg,#1c1714e6 0%,transparent 28%)}
+.tangry-case .case-hero-visual{width:62%}
+.tangry-case .case-hero-visual img{object-position:center center}
+.tangry-case .case-overline,.tangry-case .case-intro-label{color:#ffb16f}
+.tangry-case .case-tm{color:#ff9a42}
+.tangry-case .case-hero-tagline em,.tangry-case h2 em{color:var(--tangry-orange)}
+.tangry-case .pill-button{background:var(--tangry-orange)}
+.tangry-case .pill-button:hover{background:#dc6510}
+.tangry-case .section-label{color:#b66c36}
+.tangry-case .small-caps{color:#a86739}
+.tangry-case .tangry-orange{color:var(--tangry-orange)}
+.tangry-case .brand-palette span{border-color:#e8cdb9;color:#8c6448}
+.tangry-case .brand-palette{border-color:#e7d6ca}
+.tangry-case .figure img{border-radius:4px}
+.tangry-case .concept-pair img{aspect-ratio:1/1;object-fit:cover}
+.tangry-case .product-gallery img{object-fit:cover}
+.tangry-case .product-primary img{aspect-ratio:16/10;max-height:620px}
+.tangry-case .product-gallery .figure:not(.product-primary) img{aspect-ratio:1/1}
+.tangry-case .campaign-grid img{aspect-ratio:4/5;object-fit:cover}
+.tangry-case .campaign-grid .figure:nth-child(1) img{object-position:center 36%}
+.tangry-case .campaign-grid .figure:nth-child(2) img{object-position:center center}
+.tangry-case .campaign-grid .figure:nth-child(3) img{object-position:center center}
+.tangry-case .campaign-grid .figure:nth-child(4) img{object-position:center center}
+.tangry-case .process-rows>div>span{color:var(--tangry-orange)}
+.tangry-case .process-foot{color:#cf7433}
+.tangry-case .case-next{background:#201914}
+.tangry-case .case-next>div>p{color:#f1a565}
+.tangry-case .case-next h2 em{color:#ff9b43}
+.tangry-case .case-next-links a{border-color:#c87c43}
+.tangry-case .case-footer{border-color:#574438;color:#cbb6a8}
+@media(max-width:700px){.tangry-case .case-hero-visual{width:100%}.tangry-case .case-hero-visual img{object-position:61% center}.tangry-case .case-hero:before{background:linear-gradient(90deg,#1c1714eb 0%,#1c1714bf 42%,#1c17145a),linear-gradient(0deg,#1c1714 0%,transparent 32%)}.tangry-case .product-primary img{max-height:520px}}
