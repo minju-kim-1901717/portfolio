@@ -76,3 +76,6 @@ git push origin main
 - 메인 숏폼 갤러리의 NÉTHRA 카드(이미지·제목)를 누르면 `projects/nethra.html` 상세 페이지로 바로 이동합니다. 상세 페이지의 최종 광고 영상은 기존대로 재생할 수 있습니다.
 - 화면에 표시되던 GitHub Pages 배포·로컬 미리보기·YouTube 오류 153 안내와 인스타그램 임시 썸네일 제작자 안내를 삭제했습니다.
 - 파일을 직접 여는 미리보기에서 동영상을 클릭하면 별도 안내문 대신 원본 YouTube 페이지가 새 탭으로 열립니다. 웹에 배포하면 기존처럼 페이지 내부 플레이어가 작동합니다.
+
+## TANGRY assets
+Actual TANGRY campaign images are stored in `assets/tangry/01.webp` through `10.webp` and are used by `projects/tangry.html` and the AI Creative Lab card.
